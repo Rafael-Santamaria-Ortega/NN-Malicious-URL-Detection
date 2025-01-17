@@ -1,4 +1,4 @@
-# NN-Malicious-URL-Detection 
+# Neural Network for Malicious URL Prediction
 
 This TensorFlow-based neural network is designed to predict whether URLs collected from the wild are malicious or benign. Initially trained on Kaggle's Malicious URL Dataset, the project is currently being enhanced with features like learning rate decay, F1 score metrics, and additional data from URLhaus. While still under development, the project is approximately 85% complete and already offers a reliable framework for malicious URL detection.
 
