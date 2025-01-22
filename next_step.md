@@ -146,6 +146,58 @@ root.mainloop()
    ```
 
 ---
+1. Use PyInstaller to Create a Standalone Executable
+Install PyInstaller
+Install PyInstaller in your Python environment:
 
-Would you like further assistance with customization or troubleshooting?
+bash
+Copy
+Edit
+pip install pyinstaller
+Package Your Application
+Run the following command to create a standalone executable:
 
+bash
+Copy
+Edit
+pyinstaller --onefile --noconsole your_script.py
+--onefile: Packages everything into a single executable file.
+--noconsole: Prevents the console window from appearing (useful for GUI applications).
+This will generate the executable in the dist/ directory.
+
+2. Include the Model File (model.h5)
+Since the .h5 file is not embedded in the executable, you need to ensure it is accessible. You can package it with your application or define its path dynamically.
+
+Modify Your Script to Handle Relative Paths
+Update your script to load the model file dynamically:
+
+python
+Copy
+Edit
+import os
+import tensorflow as tf
+
+# Get the directory where the script/executable is located
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Load the model from the same directory
+model_path = os.path.join(base_dir, 'model.h5')
+model = tf.keras.models.load_model(model_path)
+Place the model.h5 file in the same directory as the executable.
+
+3. Test the Executable
+Navigate to the dist/ directory.
+Place the model.h5 file alongside the executable.
+Run the executable:
+On Windows: Double-click the .exe file.
+On macOS/Linux: Run the executable from the terminal if needed.
+4. Distribute the Application
+Package the executable and required files (like model.h5) into a ZIP or installer.
+
+Create an Installer (Optional)
+You can use tools like Inno Setup (Windows) or pkgbuild (macOS) to create an installer for a more professional distribution.
+
+Advantages of This Approach
+No Docker or Python Required: End-users only need to download and run the application.
+Self-Contained: All dependencies are bundled.
+Cross-Platform: With some adjustments, you can create executables for multiple operating systems.
