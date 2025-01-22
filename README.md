@@ -28,7 +28,7 @@ This modular approach also enables calling the complete training and prediction 
 
 ## Future Scope
 
-This project continues to evolve as additional data and features are integrated. Its modular design ensures adaptability, making it a strong foundation for tackling similar challenges in cybersecurity.
+This project continues to evolve as additional data and features are integrated. Its modular design ensures adaptability, making it a strong foundation for tackling similar challenges in cybersecurity. Currently, I'm working in improving the model's results and deploying it as a standalone application to be downloaded and run initially in windows systems, and later in Linux and Mac.
 
 ## License
 
