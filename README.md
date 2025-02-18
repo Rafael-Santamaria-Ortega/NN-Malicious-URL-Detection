@@ -25,7 +25,8 @@ This modular approach also enables calling the complete training and prediction 
 ## Updates and future plans
 
 Currently:
-* I'm working in improving the model's results by adding more data and fixing some small biases.
+* Updated the database to almost double its size with malicious urls, thus fixing a great deal the biased Kaggle dataset! The python code used is added to the repository, as well as the zip file containing the new database.
+* I'm working in improving the model's results by fixing some small biases.
 * Scripted a Tkinter interface that leverages the trained model and a pickled tokenizer to make prediction when urls are copy pasted.
 * Still haven't built the independent executable. 
 
